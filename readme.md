@@ -12,10 +12,21 @@ This is how you can scrap the metadata info from an object.
 
 	MetaDataHelper<MetaData> mirrorHelper = new MetaDataHelper<MetaData>();
   	List<MetaDataValue<MetaData>> mirrorModels = mirrorHelper.getMirrorValues(new Anno());
+  	
+The annotated class.
 
-MetaDataValue
+	class Anno {
+  
+	  @MetaData("test")
+	  void test() {}
+	  
+	}
 
+MetaDataValue has the following fields:
 
+	Symbol memberName;
+  	InstanceMirror instanceMirror;
+  	T object;
 
 ### Notes to Contributors ###
 
