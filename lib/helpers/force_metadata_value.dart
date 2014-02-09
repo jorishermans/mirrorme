@@ -8,8 +8,8 @@ class MetaDataValue<T> {
   
   MetaDataValue(this.object, this.memberName, this.instanceMirror);
   
-  void invoke(List positionalArguments) {
-      instanceMirror.invoke(memberName, positionalArguments);
+  InstanceMirror invoke(List positionalArguments) {
+     InstanceMirror res = instanceMirror.invoke(memberName, positionalArguments);
   }
 
   String toString() => "$object - $memberName";
