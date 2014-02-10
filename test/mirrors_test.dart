@@ -10,9 +10,20 @@ main() {
      expect(mirrorModels.length, 2);
      expect(mirrorModels.first.object.value, "test");
   });
+  
+  Scanner<Classes, Anno> classesHelper = new Scanner<Classes, Anno>();
+  List<Anno> classes = classesHelper.scan();
+  
+  test('scan classes tests for mirror helper api', () {
+    expect(mirrorModels.length, 2);
+    expect(mirrorModels.first.object.value, "test");
+    expect(classes.length, 1);
+    expect(classes.first.value(), 3);
+  });
     
 }
 
+@Classes()
 class Anno {
   
   @MetaData("test")
@@ -21,6 +32,9 @@ class Anno {
   @MetaData("test2")
   void test2() {}
   
+  int value() {
+    return 3;
+  }
 }
 
 class MetaData {
@@ -29,5 +43,11 @@ class MetaData {
   const MetaData(this.value);
 
   String toString() => "$value";
+  
+}
+
+class Classes {
+  
+  const Classes();
   
 }
