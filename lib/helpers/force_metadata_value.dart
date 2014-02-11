@@ -9,7 +9,7 @@ class MetaDataValue<T> {
   MetaDataValue(this.object, this.memberName, this.instanceMirror);
   
   InstanceMirror invoke(List positionalArguments) {
-     InstanceMirror res = instanceMirror.invoke(memberName, positionalArguments);
+     return instanceMirror.invoke(memberName, positionalArguments);
   }
 
   String toString() => "$object - $memberName";
