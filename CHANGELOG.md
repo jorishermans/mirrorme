@@ -2,6 +2,10 @@
 
 This file contains highlights of what changes on each version of the forcemvc package. 
 
+#### Pub version 0.1.5 ####
+
+Adding a class scanner to get a list of all classes with a certain annotation.
+
 #### Pub version 0.1.4 & 0.1.4+1 ####
 
 Adding invoke method to force metadata value.
