@@ -35,7 +35,7 @@ Search for classes that implement or extend for example the class Anno.
 
 ### Notes to Contributors ###
 
-#### Fork Dart Force MVC ####
+#### Fork Dart Force Mirrors ####
 
 If you'd like to contribute back to the core, you can [fork this repository](https://help.github.com/articles/fork-a-repo) and send us a pull request, when it is ready.
 
@@ -43,7 +43,7 @@ If you are new to Git or GitHub, please read [this guide](https://help.github.co
 
 #### Dart Force ####
 
-Realtime web framework for dart that uses force MVC [source code](https://github.com/jorishermans/dart-force)
+Realtime web framework for dart that uses forcemvc & forcemirrors [source code](https://github.com/jorishermans/dart-force)
 
 #### Twitter ####
 
