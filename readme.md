@@ -28,6 +28,11 @@ MetaDataValue has the following fields:
   	InstanceMirror instanceMirror;
   	T object;
 
+Search for classes that implement or extend for example the class Anno.
+
+	ClassSearcher<Anno> searcher = new ClassSearcher<Anno>();
+  	List<Anno> searchResult = searcher.scan();
+
 ### Notes to Contributors ###
 
 #### Fork Dart Force MVC ####
