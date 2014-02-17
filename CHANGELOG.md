@@ -2,9 +2,13 @@
 
 This file contains highlights of what changes on each version of the forcemvc package. 
 
+#### Pub version 0.1.6+1 ####
+
+Creating the correct instance of the correct class in class searcher.
+
 #### Pub version 0.1.6 ####
 
-Looking
+Adding a way to search for class that implements or extends a certain class with mirror operations.
 
 #### Pub version 0.1.5 ####
 

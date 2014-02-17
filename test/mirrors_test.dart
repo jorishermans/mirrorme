@@ -26,7 +26,7 @@ main() {
   
   test('Class searcher test of the mirror helper api', () {
     expect(searchResult.length, 2);
-    expect(searchResult.first.value(), 3);
+    expect(searchResult.first.value(), 5);
   });
     
 }
@@ -45,7 +45,11 @@ class Anno {
   }
 }
 
-class ExtraAnno extends Anno {}
+class ExtraAnno extends Anno {
+  int value() {
+    return 5;
+  }
+}
 
 class MetaData {
   
