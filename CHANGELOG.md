@@ -2,6 +2,10 @@
 
 This file contains highlights of what changes on each version of the forcemvc package. 
 
+#### Pub version 0.1.6+2 ####
+
+Adding dev dependencies for unittests.
+
 #### Pub version 0.1.6+1 ####
 
 Creating the correct instance of the correct class in class searcher.
