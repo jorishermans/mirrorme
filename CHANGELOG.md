@@ -2,6 +2,10 @@
 
 This file contains highlights of what changes on each version of the forcemvc package. 
 
+#### Pub version 0.1.7 ####
+
+Provide methodMirror in MetaDataValue and added a property to access parameters.
+
 #### Pub version 0.1.6+2 ####
 
 Adding dev dependencies for unittests.

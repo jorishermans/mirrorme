@@ -22,7 +22,7 @@ class MetaDataHelper<T> {
               String name = (MirrorSystem.getName(mm.simpleName));
               Symbol memberName = mm.simpleName;
               
-              mirrorValues.add(new MetaDataValue<T>(request, memberName, instanceMirror));
+              mirrorValues.add(new MetaDataValue<T>(request, mm, memberName, instanceMirror));
             }
           }
         }
