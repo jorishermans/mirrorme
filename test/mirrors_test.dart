@@ -28,10 +28,18 @@ main() {
     expect(searchResult.length, 2);
     expect(searchResult.first.value(), 5);
   });
+  
+  AnnotationChecker<Classome> annoChecker = new AnnotationChecker<Classome>();
+  
+   test('Class searcher test of the mirror helper api', () {
+     expect(annoChecker.hasOnClazz(new Anno()), true);
+     expect(annoChecker.hasOnClazz(new ExtraAnno()), false);
+   });
     
 }
 
 @Classes()
+@Classome()
 class Anno {
   
   @MetaData("test")
@@ -63,5 +71,11 @@ class MetaData {
 class Classes {
   
   const Classes();
+  
+}
+
+class Classome {
+  
+  const Classome();
   
 }

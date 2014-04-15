@@ -2,6 +2,10 @@
 
 This file contains highlights of what changes on each version of the forcemvc package. 
 
+#### Pub version 0.1.8 ####
+
+Adding functionality to check if a annotation is available on a class.
+
 #### Pub version 0.1.7 ####
 
 Provide methodMirror in MetaDataValue and added a property to access parameters.
