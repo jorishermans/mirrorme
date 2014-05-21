@@ -4,6 +4,10 @@ This file contains highlights of what changes on each version of the forcemvc pa
 
 #### Pub version 0.1.8 ####
 
+Adding name to get the string name out of the mirrors in the class 'MetaDataValue'.
+
+#### Pub version 0.1.8 ####
+
 Adding functionality to check if a annotation is available on a class.
 
 #### Pub version 0.1.7 ####

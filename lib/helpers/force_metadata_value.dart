@@ -13,6 +13,8 @@ class MetaDataValue<T> {
      return instanceMirror.invoke(memberName, positionalArguments);
   }
   
+  String get name => MirrorSystem.getName(memberName);
+  
   List<ParameterMirror> get parameters => this._methodMirror.parameters;
 
   String toString() => "$object - $memberName";
