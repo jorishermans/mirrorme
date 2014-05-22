@@ -11,6 +11,14 @@ main() {
      expect(mirrorModels.first.object.value, "test");
   });
   
+  MetaDataHelper<Var> varMirrorHelper = new MetaDataHelper<Var>();
+  List<MetaDataValue<Var>> varMirrorModels = varMirrorHelper.getVariableMirrorValues(new Anno());
+    
+  test('basic tests for mirror helper api, only on variables', () {
+     expect(varMirrorModels.length, 1);
+     expect(varMirrorModels.first.name, "bla");
+  });
+  
   Scanner<Classes, Anno> classesHelper = new Scanner<Classes, Anno>();
   List<Anno> classes = classesHelper.scan();
   
@@ -42,9 +50,13 @@ main() {
 @Classome()
 class Anno {
   
+  @Var()
+  String bla;
+  
   @MetaData("test")
   void test() {}
 
+  @Var()
   @MetaData("test2")
   void test2() {}
   
@@ -71,6 +83,12 @@ class MetaData {
 class Classes {
   
   const Classes();
+  
+}
+
+class Var {
+  
+  const Var();
   
 }
 

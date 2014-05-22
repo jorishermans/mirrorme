@@ -2,6 +2,10 @@
 
 This file contains highlights of what changes on each version of the forcemvc package. 
 
+#### Pub version 0.1.9 ####
+
+Extend MetaDataHelper so it can search for methods and variables.
+
 #### Pub version 0.1.8 ####
 
 Adding name to get the string name out of the mirrors in the class 'MetaDataValue'.
