@@ -4,6 +4,10 @@ This file contains highlights of what changes on each version of the forcemvc pa
 
 #### Pub version 0.1.9 ####
 
+Add method 'getOtherMetadata' in the class 'MetaDataValue'.
+
+#### Pub version 0.1.9 ####
+
 Extend MetaDataHelper so it can search for methods and variables.
 
 #### Pub version 0.1.8 ####

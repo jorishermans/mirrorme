@@ -23,6 +23,16 @@ class MetaDataValue<T> {
     return new List<ParameterMirror>();
   }
 
+  List<Object> getOtherMetadata(Type type) {
+    List<Object> objects = new List<Object>();
+    for (InstanceMirror im in _dclMirror.metadata) {
+      if (!(im.type is T) && im.hasReflectee) {
+        objects.add(im.reflectee);
+      }
+    }
+    return objects;
+  }
+  
   String toString() => "$object - $memberName";
   
 }
