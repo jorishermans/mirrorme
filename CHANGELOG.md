@@ -2,7 +2,7 @@
 
 This file contains highlights of what changes on each version of the forcemvc package. 
 
-#### Pub version 0.1.9 ####
+#### Pub version 0.1.10 & 0.1.10+1 & 0.1.10+2 ####
 
 Add method 'getOtherMetadata' in the class 'MetaDataValue'.
 
