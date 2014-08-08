@@ -1,31 +1,18 @@
 part of dart_force_mirrors_lib;
 
-class Scanner<T,R> {
-  
+class Scanner<T, R> {
+
   List<R> scan() {
-    var mirrorSystem = currentMirrorSystem();
-    
-    List<R> values = new List<R>();
-    
-    mirrorSystem.libraries.values.forEach((library) {
-      String name = MirrorSystem.getName(library.simpleName);
-      if (!name.startsWith("dart.")) {
-        library.declarations.values.forEach((declaration) {
-          if (declaration is ClassMirror) {
-            ClassMirror cm = declaration;
-            for (var im in cm.metadata) {
-              if (im.reflectee is T) {
-                if (cm.hasReflectedType) {
-                  InstanceMirror im = cm.newInstance(const Symbol(''), []);
-                  var obj = im.reflectee;
-                  values.add(obj);
-                }
-              }
-            }
-          }
-        });
-      }
-    });
-    return values;
+    //return new List<R>
+    return new List.from(
+        //From:
+        currentMirrorSystem().isolate.rootLibrary.declarations.values.where(  
+            //Where:
+            //declarationMirror is ClassMirror
+          (dm) => dm is ClassMirror 
+            //And declarationMirror.metadata contains any instanceMirror.reflectee with type T
+            && dm.metadata.any((im) => im.reflectee is T)
+        ).map(// map the result from where to a Reflectee
+            (dm) => (dm as ClassMirror).newInstance(const Symbol(''), []).reflectee));
   }
 }
