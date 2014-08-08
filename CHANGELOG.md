@@ -2,6 +2,10 @@
 
 This file contains highlights of what changes on each version of the forcemvc package. 
 
+#### Pub version 0.1.11 ####
+
+Change logic of annotation_checker and class_scanner to reduce size.
+
 #### Pub version 0.1.10+3 ####
 
 Skip dart core libraries to scan for annotations.
