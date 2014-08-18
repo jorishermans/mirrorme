@@ -6,7 +6,7 @@ class ClassSearcher<T> {
     var mirrorSystem = currentMirrorSystem();
     
     List<T> values = new List<T>();
-    
+
     mirrorSystem.libraries.values.forEach((library) {
       var classCounter = 0;
       library.declarations.values.forEach((declaration) {
