@@ -10,8 +10,8 @@ A mirrors helper library for the dart force framework
 
 This is how you can scrap the metadata info from an object. 
 
-	MetaDataHelper<MetaData> mirrorHelper = new MetaDataHelper<MetaData>();
-  	List<MetaDataValue<MetaData>> mirrorModels = mirrorHelper.getMirrorValues(new Anno());
+	MetaDataHelper<MetaData, MethodMirror> mirrorHelper = new MetaDataHelper<MetaData, MethodMirror>();
+  	List<MetaDataValue<MetaData>> mirrorModels = mirrorHelper.from(new Anno());
   	
 The annotated class.
 

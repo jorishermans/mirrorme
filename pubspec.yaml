@@ -1,6 +1,6 @@
 name: forcemirrors
 description: A mirrors helper library
-version: 0.1.11+1
+version: 0.2.0
 author: Joris Hermans <hermansj@gmail.com>
 homepage: https://github.com/ForceUniverse/dart-forcemirrors
 dev_dependencies:

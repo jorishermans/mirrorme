@@ -2,6 +2,13 @@
 
 This file contains highlights of what changes on each version of the forcemvc package. 
 
+#### Pub version 0.2.0 ####
+
+add iml to gitignore
+Rename AnnotationChecker to AnnotationScanner
+Scan All libraries instead of just RootLibrary
+Add Documentation
+
 #### Pub version 0.1.11 ####
 
 Change logic of annotation_checker and class_scanner to reduce size.
