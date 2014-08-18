@@ -1,25 +1,26 @@
 import 'package:unittest/unittest.dart';
 import 'package:forcemirrors/force_mirrors.dart';
+import 'dart:mirrors';
 
 main() {  
   // First tests!  
-  MetaDataHelper<MetaData> mirrorHelper = new MetaDataHelper<MetaData>();
-  List<MetaDataValue<MetaData>> mirrorModels = mirrorHelper.getMirrorValues(new Anno());
+  MetaDataHelper<MetaData, MethodMirror> mirrorHelper = new MetaDataHelper<MetaData, MethodMirror>();
+  List<MetaDataValue<MetaData>> mirrorModels = mirrorHelper.from(new Anno());
   
   test('basic tests for mirror helper api', () {
      expect(mirrorModels.length, 2);
      expect(mirrorModels.first.object.value, "test");
   });
   
-  MetaDataHelper<Var> varMirrorHelper = new MetaDataHelper<Var>();
-  List<MetaDataValue<Var>> varMirrorModels = varMirrorHelper.getVariableMirrorValues(new Anno());
+  MetaDataHelper<Var, VariableMirror> varMirrorHelper = new MetaDataHelper<Var, VariableMirror>();
+  List<MetaDataValue<Var>> varMirrorModels = varMirrorHelper.from(new Anno());
     
   test('basic tests for mirror helper api, only on variables', () {
      expect(varMirrorModels.length, 1);
      expect(varMirrorModels.first.name, "bla");
   });
   
-  Scanner<Classes, Anno> classesHelper = new Scanner<Classes, Anno>();
+  Scanner<Classes> classesHelper = new Scanner<Classes>();
   List<Anno> classes = classesHelper.scan();
   
   test('scan classes tests for mirror helper api', () {
@@ -37,11 +38,11 @@ main() {
     expect(searchResult.first.value(), 5);
   });
   
-  AnnotationChecker<Classome> annoChecker = new AnnotationChecker<Classome>();
+  AnnotationScanner<Classome> annoChecker = new AnnotationScanner<Classome>();
   
    test('Class searcher test of the mirror helper api', () {
-     expect(annoChecker.hasOnClazz(new Anno()), true);
-     expect(annoChecker.hasOnClazz(new ExtraAnno()), false);
+     expect(annoChecker.isOn(new Anno()), true);
+     expect(annoChecker.isOn(new ExtraAnno()), false);
    });
     
 }
