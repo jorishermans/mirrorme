@@ -16,13 +16,20 @@ class MetaDataHelper<T, DM> {
   }
 
   /**
-   * Get MetaDataValue of the obj's properties annotated with T (ej. @Value or @Autowired)
+   * Get [MetaDataValue] of the obj's properties, fields, methods, variables, ... annotated with T (ej. @Value or @Autowired)
    */
   List<MetaDataValue<T>> from(Object obj) {
     var instanceMirror = reflect(obj);
-    return new List.from(_scan(instanceMirror).map((dm) {
-      InstanceMirror am1 = dm.metadata.firstWhere((am) => am.reflectee is T);
-      return new MetaDataValue<T>(am1.reflectee, dm, dm.simpleName, instanceMirror);
-    }));
+    return fromMirror(instanceMirror);
+  }
+  
+  /**
+   * Get [MetaDataValue] of the instanceMirror properties annotated with T (ej. @Value or @Autowired)
+   */
+  List<MetaDataValue<T>> fromMirror(InstanceMirror instanceMirror) {
+      return new List.from(_scan(instanceMirror).map((dm) {
+        InstanceMirror am1 = dm.metadata.firstWhere((am) => am.reflectee is T);
+        return new MetaDataValue<T>(am1.reflectee, dm, dm.simpleName, instanceMirror);
+      }));
   }
 }

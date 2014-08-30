@@ -2,6 +2,10 @@
 
 This file contains highlights of what changes on each version of the forcemvc package. 
 
+#### Pub version 0.2.1 ####
+
+extends the MetaDataHelper with method fromMirror, so we can look at it without instantiating it.
+
 #### Pub version 0.2.0 ####
 
 add iml to gitignore
