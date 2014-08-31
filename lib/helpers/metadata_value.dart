@@ -57,7 +57,7 @@ class MetaDataValue<T> {
       MethodMirror mm = this._dclMirror;
       return mm.returnType.reflectedType;
     }
-    if (this._dclMirror is MethodMirror) {
+    if (this._dclMirror is VariableMirror) {
       VariableMirror vm = this._dclMirror;
       return vm.type.reflectedType;
     }
