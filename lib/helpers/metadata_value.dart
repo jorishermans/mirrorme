@@ -23,7 +23,7 @@ class MetaDataValue<T> {
   /**
    * return the method, var, class mirror that is having the metadata.
    */
-  T get dclOnMetaData => _dclMirror is T ? _dclMirror : null;
+  T get dclWithMetaData => _dclMirror is T ? _dclMirror : null;
 
   /**
    * Get the corresponding name of the annotated [memberName]
