@@ -19,12 +19,7 @@ class MetaDataValue<T> {
   InstanceMirror invoke(List positionalArguments) {
      return instanceMirror.invoke(memberName, positionalArguments);
   }
-  
-  /**
-   * return the method, var, class mirror that is having the metadata.
-   */
-  T get dclWithMetaData => _dclMirror is T ? _dclMirror : null;
-
+ 
   /**
    * Get the corresponding name of the annotated [memberName]
    */
@@ -52,6 +47,21 @@ class MetaDataValue<T> {
       }
     }
     return objects;
+  }
+  
+  /**
+   * Get the return type of the variable or the method that metadata is on
+   */
+  Type typeOfOwner() {
+    if (this._dclMirror is MethodMirror) {
+      MethodMirror mm = this._dclMirror;
+      return mm.returnType.reflectedType;
+    }
+    if (this._dclMirror is MethodMirror) {
+      VariableMirror vm = this._dclMirror;
+      return vm.type.reflectedType;
+    }
+    return null;
   }
   
   String toString() => "$object - $memberName";
