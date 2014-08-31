@@ -19,6 +19,11 @@ class MetaDataValue<T> {
   InstanceMirror invoke(List positionalArguments) {
      return instanceMirror.invoke(memberName, positionalArguments);
   }
+  
+  /**
+   * return the method, var, class mirror that is having the metadata.
+   */
+  T get dclOnMetaData => _dclMirror is T ? _dclMirror : null;
 
   /**
    * Get the corresponding name of the annotated [memberName]

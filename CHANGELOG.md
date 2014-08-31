@@ -2,6 +2,10 @@
 
 This file contains highlights of what changes on each version of the forcemvc package. 
 
+#### Pub version 0.2.1+1 ####
+
+add a method on MetadataValue to get declartion of, named dclOnMetaData
+
 #### Pub version 0.2.1 ####
 
 extends the MetaDataHelper with method fromMirror, so we can look at it without instantiating it.
