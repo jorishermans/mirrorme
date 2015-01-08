@@ -1,5 +1,5 @@
 import 'package:unittest/unittest.dart';
-import 'package:forcemirrors/force_mirrors.dart';
+import 'package:mirrorme/mirrorme.dart';
 import 'dart:mirrors';
 
 main() {  

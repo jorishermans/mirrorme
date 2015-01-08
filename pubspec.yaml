@@ -1,7 +1,7 @@
-name: forcemirrors
-description: A mirrors helper library
-version: 0.2.1+5
+name: mirrorme
+version: 0.2.2
 author: Joris Hermans <hermansj@gmail.com>
-homepage: https://github.com/ForceUniverse/dart-forcemirrors
+description: A mirrors helper library
+homepage: https://github.com/ForceUniverse/mirrorme
 dev_dependencies:
   unittest: '>=0.9.0 <0.9.1'

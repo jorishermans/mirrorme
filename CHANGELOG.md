@@ -2,6 +2,10 @@
 
 This file contains highlights of what changes on each version of the forcemvc package. 
 
+#### Pub version 0.2.2 ####
+
+renaming to mirrorme
+
 #### Pub version 0.2.1+1 - 0.2.1+5 ####
 
 add a method on MetadataValue to get the return type typeOfOwner
