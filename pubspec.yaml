@@ -2,6 +2,6 @@ name: mirrorme
 version: 0.2.2
 author: Joris Hermans <hermansj@gmail.com>
 description: A mirrors helper library
-homepage: https://github.com/ForceUniverse/mirrorme
+homepage: https://github.com/jorishermans/mirrorme
 dev_dependencies:
   unittest: '>=0.9.0 <0.9.1'
